@@ -2,9 +2,9 @@
 
 namespace WPF_FirstProject.View.UserControls
 {
-	public partial class MenuBar : UserControl
+	public partial class Body : UserControl
 	{
-		public MenuBar()
+		public Body()
 		{
 			InitializeComponent();
 		}
