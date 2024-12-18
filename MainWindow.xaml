@@ -4,9 +4,43 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_FirstProject"
+        xmlns:userControls="clr-namespace:WPF_FirstProject.View.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <!-- Tools Bars -->
+        <userControls:MenuBar Grid.Row="0"/>
+
+
+        <!-- Main Menu -->
+        <Rectangle Grid.Row="1"></Rectangle>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Fill="AntiqueWhite"></Rectangle>
+            <Rectangle Grid.Column="1" Fill="BurlyWood"></Rectangle>
+            <Rectangle Grid.Column="2" Fill="LightYellow"></Rectangle>
+
+            <Button Grid.Column="0" Name="BtnRun" 
+                    Width="100" 
+                    Height="25" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Content="Click Me" />
+        </Grid>
+
+        <!-- Footer -->
+        <Rectangle Grid.Row="2" Fill="BlueViolet"></Rectangle>
+
 
     </Grid>
 </Window>

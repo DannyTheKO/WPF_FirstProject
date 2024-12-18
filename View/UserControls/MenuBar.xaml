@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WPF_FirstProject.View.UserControls.MenuBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_FirstProject.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+
+            <MenuItem Header="Edit"/>
+        </Menu>
+
+        <Rectangle Grid.Row="1" Fill="DarkMagenta"></Rectangle>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBox Grid.Column="1" Name="TbHelloWorld" 
+                         FontSize="12"
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Center"
+                         Text="Hello World!"/>
+
+            <Button Grid.Column="0" Name="BtnHi"
+                        Width="50"
+                        Margin="5"
+                        Content="Hi"
+                        />
+        </Grid>
+    </Grid>
+</UserControl>
